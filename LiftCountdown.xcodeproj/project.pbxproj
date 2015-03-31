@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A181CA6199F8A4200305F4A /* seconds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A181CA5199F8A4200305F4A /* seconds.mp3 */; };
+		2A181CA9199F8A7600305F4A /* LCSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A181CA8199F8A7600305F4A /* LCSoundPlayer.m */; };
+		2A181CAB199F8B8800305F4A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A181CAA199F8B8800305F4A /* AVFoundation.framework */; };
+		2A2EFF28196842C20001A92A /* LCLifeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EFF27196842C20001A92A /* LCLifeTimeViewController.m */; };
+		2A2EFF2B196844A30001A92A /* LCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EFF2A196844A30001A92A /* LCViewController.m */; };
+		2A50ED5719AF6C580009CD14 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A50ED5619AF6C580009CD14 /* icon.png */; };
+		2A75FA8C1976B65100B804E4 /* LCAgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A75FA8B1976B65100B804E4 /* LCAgeViewController.m */; };
+		2AEBEE76196598B400CB2C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEBEE75196598B400CB2C71 /* Foundation.framework */; };
+		2AEBEE78196598B400CB2C71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEBEE77196598B400CB2C71 /* CoreGraphics.framework */; };
+		2AEBEE7A196598B400CB2C71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEBEE79196598B400CB2C71 /* UIKit.framework */; };
+		2AEBEE80196598B400CB2C71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEBEE7E196598B400CB2C71 /* InfoPlist.strings */; };
+		2AEBEE82196598B400CB2C71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBEE81196598B400CB2C71 /* main.m */; };
+		2AEBEE86196598B400CB2C71 /* LCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBEE85196598B400CB2C71 /* LCAppDelegate.m */; };
+		2AEBEE88196598B400CB2C71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AEBEE87196598B400CB2C71 /* Images.xcassets */; };
+		2AEBEEA61965990500CB2C71 /* LCBirthDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBEEA51965990500CB2C71 /* LCBirthDayViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A181CA5199F8A4200305F4A /* seconds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = seconds.mp3; path = Resources/sound/seconds.mp3; sourceTree = "<group>"; };
+		2A181CA7199F8A7600305F4A /* LCSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSoundPlayer.h; sourceTree = "<group>"; };
+		2A181CA8199F8A7600305F4A /* LCSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSoundPlayer.m; sourceTree = "<group>"; };
+		2A181CAA199F8B8800305F4A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2A2EFF26196842C20001A92A /* LCLifeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLifeTimeViewController.h; sourceTree = "<group>"; };
+		2A2EFF27196842C20001A92A /* LCLifeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLifeTimeViewController.m; sourceTree = "<group>"; };
+		2A2EFF29196844A30001A92A /* LCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewController.h; sourceTree = "<group>"; };
+		2A2EFF2A196844A30001A92A /* LCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewController.m; sourceTree = "<group>"; };
+		2A334B271984EE3E00CF1009 /* LCDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDefine.h; sourceTree = "<group>"; };
+		2A50ED5619AF6C580009CD14 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icon/icon.png; sourceTree = "<group>"; };
+		2A75FA8A1976B65100B804E4 /* LCAgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAgeViewController.h; sourceTree = "<group>"; };
+		2A75FA8B1976B65100B804E4 /* LCAgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAgeViewController.m; sourceTree = "<group>"; };
+		2AEBEE72196598B400CB2C71 /* LiftCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEBEE75196598B400CB2C71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2AEBEE77196598B400CB2C71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2AEBEE79196598B400CB2C71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2AEBEE7D196598B400CB2C71 /* LiftCountdown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiftCountdown-Info.plist"; sourceTree = "<group>"; };
+		2AEBEE7F196598B400CB2C71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AEBEE81196598B400CB2C71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AEBEE83196598B400CB2C71 /* LiftCountdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiftCountdown-Prefix.pch"; sourceTree = "<group>"; };
+		2AEBEE84196598B400CB2C71 /* LCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCAppDelegate.h; sourceTree = "<group>"; };
+		2AEBEE85196598B400CB2C71 /* LCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCAppDelegate.m; sourceTree = "<group>"; };
+		2AEBEE87196598B400CB2C71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2AEBEE8E196598B400CB2C71 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2AEBEEA41965990500CB2C71 /* LCBirthDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBirthDayViewController.h; sourceTree = "<group>"; };
+		2AEBEEA51965990500CB2C71 /* LCBirthDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBirthDayViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AEBEE6F196598B400CB2C71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A181CAB199F8B8800305F4A /* AVFoundation.framework in Frameworks */,
+				2AEBEE78196598B400CB2C71 /* CoreGraphics.framework in Frameworks */,
+				2AEBEE7A196598B400CB2C71 /* UIKit.framework in Frameworks */,
+				2AEBEE76196598B400CB2C71 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A181CA3199F8A1800305F4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A50ED5519AF6C400009CD14 /* icon */,
+				2A181CA4199F8A3100305F4A /* sound */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A181CA4199F8A3100305F4A /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				2A181CA5199F8A4200305F4A /* seconds.mp3 */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+		2A50ED5519AF6C400009CD14 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				2A50ED5619AF6C580009CD14 /* icon.png */,
+			);
+			name = icon;
+			sourceTree = "<group>";
+		};
+		2AEBEE69196598B400CB2C71 = {
+			isa = PBXGroup;
+			children = (
+				2A181CA3199F8A1800305F4A /* Resources */,
+				2AEBEE7B196598B400CB2C71 /* LiftCountdown */,
+				2AEBEE74196598B400CB2C71 /* Frameworks */,
+				2AEBEE73196598B400CB2C71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AEBEE73196598B400CB2C71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AEBEE72196598B400CB2C71 /* LiftCountdown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AEBEE74196598B400CB2C71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A181CAA199F8B8800305F4A /* AVFoundation.framework */,
+				2AEBEE75196598B400CB2C71 /* Foundation.framework */,
+				2AEBEE77196598B400CB2C71 /* CoreGraphics.framework */,
+				2AEBEE79196598B400CB2C71 /* UIKit.framework */,
+				2AEBEE8E196598B400CB2C71 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AEBEE7B196598B400CB2C71 /* LiftCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				2AEBEE84196598B400CB2C71 /* LCAppDelegate.h */,
+				2AEBEE85196598B400CB2C71 /* LCAppDelegate.m */,
+				2AEBEE87196598B400CB2C71 /* Images.xcassets */,
+				2AEBEE7C196598B400CB2C71 /* Supporting Files */,
+				2AEBEEA41965990500CB2C71 /* LCBirthDayViewController.h */,
+				2AEBEEA51965990500CB2C71 /* LCBirthDayViewController.m */,
+				2A2EFF26196842C20001A92A /* LCLifeTimeViewController.h */,
+				2A2EFF27196842C20001A92A /* LCLifeTimeViewController.m */,
+				2A2EFF29196844A30001A92A /* LCViewController.h */,
+				2A2EFF2A196844A30001A92A /* LCViewController.m */,
+				2A75FA8A1976B65100B804E4 /* LCAgeViewController.h */,
+				2A75FA8B1976B65100B804E4 /* LCAgeViewController.m */,
+				2A334B271984EE3E00CF1009 /* LCDefine.h */,
+				2A181CA7199F8A7600305F4A /* LCSoundPlayer.h */,
+				2A181CA8199F8A7600305F4A /* LCSoundPlayer.m */,
+			);
+			path = LiftCountdown;
+			sourceTree = "<group>";
+		};
+		2AEBEE7C196598B400CB2C71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AEBEE7D196598B400CB2C71 /* LiftCountdown-Info.plist */,
+				2AEBEE7E196598B400CB2C71 /* InfoPlist.strings */,
+				2AEBEE81196598B400CB2C71 /* main.m */,
+				2AEBEE83196598B400CB2C71 /* LiftCountdown-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AEBEE71196598B400CB2C71 /* LiftCountdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AEBEE9E196598B400CB2C71 /* Build configuration list for PBXNativeTarget "LiftCountdown" */;
+			buildPhases = (
+				2AEBEE6E196598B400CB2C71 /* Sources */,
+				2AEBEE6F196598B400CB2C71 /* Frameworks */,
+				2AEBEE70196598B400CB2C71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiftCountdown;
+			productName = LiftCountdown;
+			productReference = 2AEBEE72196598B400CB2C71 /* LiftCountdown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AEBEE6A196598B400CB2C71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = plusluo;
+			};
+			buildConfigurationList = 2AEBEE6D196598B400CB2C71 /* Build configuration list for PBXProject "LiftCountdown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2AEBEE69196598B400CB2C71;
+			productRefGroup = 2AEBEE73196598B400CB2C71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AEBEE71196598B400CB2C71 /* LiftCountdown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AEBEE70196598B400CB2C71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A50ED5719AF6C580009CD14 /* icon.png in Resources */,
+				2A181CA6199F8A4200305F4A /* seconds.mp3 in Resources */,
+				2AEBEE80196598B400CB2C71 /* InfoPlist.strings in Resources */,
+				2AEBEE88196598B400CB2C71 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AEBEE6E196598B400CB2C71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A181CA9199F8A7600305F4A /* LCSoundPlayer.m in Sources */,
+				2AEBEE82196598B400CB2C71 /* main.m in Sources */,
+				2A75FA8C1976B65100B804E4 /* LCAgeViewController.m in Sources */,
+				2AEBEE86196598B400CB2C71 /* LCAppDelegate.m in Sources */,
+				2A2EFF2B196844A30001A92A /* LCViewController.m in Sources */,
+				2A2EFF28196842C20001A92A /* LCLifeTimeViewController.m in Sources */,
+				2AEBEEA61965990500CB2C71 /* LCBirthDayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2AEBEE7E196598B400CB2C71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AEBEE7F196598B400CB2C71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AEBEE9C196598B400CB2C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2AEBEE9D196598B400CB2C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AEBEE9F196598B400CB2C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiftCountdown/LiftCountdown-Prefix.pch";
+				INFOPLIST_FILE = "LiftCountdown/LiftCountdown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ACE7B710-D2FD-4D76-836C-E0FFCC8EC201";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2AEBEEA0196598B400CB2C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiftCountdown/LiftCountdown-Prefix.pch";
+				INFOPLIST_FILE = "LiftCountdown/LiftCountdown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ACE7B710-D2FD-4D76-836C-E0FFCC8EC201";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AEBEE6D196598B400CB2C71 /* Build configuration list for PBXProject "LiftCountdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AEBEE9C196598B400CB2C71 /* Debug */,
+				2AEBEE9D196598B400CB2C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AEBEE9E196598B400CB2C71 /* Build configuration list for PBXNativeTarget "LiftCountdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AEBEE9F196598B400CB2C71 /* Debug */,
+				2AEBEEA0196598B400CB2C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AEBEE6A196598B400CB2C71 /* Project object */;
+}

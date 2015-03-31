@@ -1,0 +1,329 @@
+package MiniWeChatMsg;
+
+enum CMD
+{
+    Cmd_RegisterReq = 1;
+    Cmd_RegisterResp = 2;
+
+    Cmd_LoginReq = 3;
+    Cmd_LoginResp = 4;
+    
+    Cmd_LogoutReq = 5;
+    Cmd_LogoutResp = 6;
+
+
+    Cmd_CreateFriendsListReq = 7;
+    Cmd_CreateFriendsListResp = 8;
+
+    Cmd_HeartBeatReq = 9;
+    Cmd_HeartBeatResp = 10;
+
+//终端消息发送
+   Cmd_CSSendTextReq = 11;
+   Cmd_CSSendTextResp = 12;
+
+    Cmd_CSSendVoiceReq = 13;
+    Cmd_CSSendVoiceResp = 14;
+
+//服务器端消息发送
+   Cmd_SCSendTextReq = 15;
+   Cmd_SCSendTextResp = 16;
+
+   Cmd_SCSendVoiceReq = 17;
+   Cmd_SCSendVoiceResp = 18;
+
+//通知有离线消息
+    Cmd_NotifyOfflineMsg = 19;
+
+//终端主动拉取消息
+   Cmd_PullMsgReq = 21;
+   Cmd_PullMsgResp = 22;
+
+//服务器好友上线通知
+    Cmd_NotifyOnlineFriend = 23;
+
+//终端拉取好友上线状态
+    Cmd_UpdateOnlineFriendReq = 25;
+    Cmd_UpdateOnlineFriendResp = 26;
+
+//好友列表变化通知（增，删，改）
+    Cmd_NotifyFriendListChange = 27;
+
+//终端拉取好友列表变化
+    Cmd_PullFriendListChangeReq = 29;
+    Cmd_PullFriendListChangeResq = 30;
+
+//通讯录联系人增减
+    Cmd_AddPhoneNOReq = 31;
+    Cmd_AddPhoneNOResq = 32;
+   
+    Cmd_DelPhoneNOReq = 33;
+    Cmd_DelPhoneNOResq = 34;
+
+    Cmd_SetUserPasswdReq = 35;
+    Cmd_SetUserPasswdResp = 36;
+
+    Cmd_SetUserNicknameReq = 37;
+    Cmd_SetUserNicknameResp = 38;
+
+//服务器内部协议
+//internel protocals between Logic Servers
+
+	Cmd_interLogicSvrRegReq = 101;
+
+//LogRegSvr to UserStateSvr
+	Cmd_interLoginNotify = 103;
+
+	Cmd_interLogoutNotify = 105;
+
+//LogRegSvr to FriendListSvr
+	Cmd_interUserNicknameNotify = 107;
+
+//StateSvr to ProxySvr	
+	Cmd_interHeartbeatTimeoutNotify = 109;
+
+//ProxySvr to StateSvr
+	Cmd_interProxyGotPackageNotify = 111;
+
+//FriendListSvr to UserStateSvr
+	Cmd_interGetOnlineStatusReq = 113;
+	Cmd_interGetOnlineStatusResp = 114;
+ }
+
+//报文头返回码
+enum RET
+{
+	Ret_RegisterSuccess = 1;
+	Ret_RegisterFailed = 2;
+
+	Ret_LoginSuccess = 3;
+	Ret_LoginUserNotRegister = 4;
+	Ret_LoginPasswdError = 5;
+	Ret_LoginAlreadyLogin = 55;
+
+	Ret_LogoutSuccess = 6;
+	Ret_LogoutFailed = 7;
+
+	//设置昵称和密码返回
+	Ret_SetUserPasswdSuccess = 8;
+	Ret_SetUserPasswdFailed = 9;
+     
+	Ret_SetUserNicknameSuccesss = 10;
+	Ret_SetUserNicknameFailed = 11;
+
+	
+	//发送文本语音操作返回结果
+	Ret_CSSendTextSuccess = 12;
+	Ret_CSSendTextFailed = 13;
+	
+	Ret_CSSendVoiceSuccess = 14;
+	Ret_CSSendVoiceFailed = 15;
+
+	Ret_AddPhoneNOSuccess = 16;
+    Ret_AddPhoneNOFailed = 17;
+
+	Ret_DelPhoneNOSuccess = 18;
+    Ret_DelPhoneNOFailed = 19;
+
+	
+	//服务器内部协议返回
+	Ret_GetOnlineStatusSuccess = 20;
+	Ret_GetOnlineStatusFailed = 21;
+
+
+}
+
+
+message Package
+{
+	optional Header head = 1;
+	optional bytes body = 2;
+}
+
+message Header
+{
+	optional string phoneNo = 1 ;
+	optional int32 cmd = 2;
+	optional uint32 seqNo = 3;
+	optional int32 ret = 4;
+}
+
+message RegisterReq
+{
+    optional string passwd = 2;
+    optional string nickName = 3;
+}
+
+
+message LoginReq
+{
+    optional string passwd = 2;
+    optional string phoneType = 3;
+}
+message LoginResp
+{
+    optional string nickName = 1;
+}
+
+//设置昵称和密码
+message SetUserPasswdReq
+{
+    optional string passwd = 2;
+}
+message SetUserNicknameReq
+{
+
+    optional string nickName = 1;
+}
+
+
+message FriendsInfo
+{
+    optional string phoneNO = 1;
+    optional string nickName = 2;
+}
+
+//创建联系人列表
+message CreateFriendsListReq
+{
+    repeated string phoneNO = 1;
+}
+
+message CreateFriendsListResp
+{
+    repeated FriendsInfo info = 1;
+}
+
+//终端消息发送
+//文本
+message CSSendTextReq
+{
+    optional string toPhoneNO = 1;
+    optional string timestamp = 3;
+    optional string message = 4;
+}
+//语音
+message CSSendVoiceReq
+{
+    optional string toPhoneNO = 1;
+    optional string timestamp = 3;
+    optional string message = 4;
+}
+
+//服务器消息发送
+//文本
+message SCSendTextReq
+{
+    optional string toPhoneNO = 1;
+    optional uint64 msgSeq = 2;
+    optional string timestamp = 3;
+    optional string message = 4;
+}
+message SCSendTextResp
+{
+    optional uint64 maxMsgSeq = 1;
+
+}
+//语音
+message SCSendVoiceReq
+{
+    optional string toPhoneNO = 1;
+    optional uint64 msgSeq = 2;
+    optional string timestamp = 3;
+    optional string message = 4;
+}
+message SCSendVoiceResp
+{
+    optional uint64 maxMsgSeq = 1;
+
+}
+//离线消息通知
+message NotifyOfflineMsg
+{
+}
+//终端主动拉取
+message PullMsgReq
+{
+    optional uint64 maxMsgSeq = 1;
+}
+message PullMsgResp
+{
+    repeated SCSendTextReq textMsg = 1;
+    repeated SCSendVoiceReq voiceMsg = 2;
+
+}
+
+//好友在线状态
+//Server通知
+message NotifyOnlineFriend
+{
+    repeated string phoneNO = 1;
+}
+message NotifyOfflineFriend
+{
+    repeated string phoneNO = 1;
+}
+
+//终端主动拉取
+message UpdateOnlineFriendReq
+{
+}
+message UpdateOnlineFriendResp
+{
+    repeated string phoneNO = 1;
+}
+
+//好友列表变化通知（增，删，改）
+message PullFriendListChangeReq
+{
+    optional uint64 maxNotifySeq = 1;
+
+}
+message PullFriendListChangeResp
+{
+    optional uint64 maxNotifySeq = 1;
+    repeated FriendChange change = 2;
+
+}
+message FriendChange
+{
+    optional string friendPhoneNO = 1;
+    optional int32 type = 2;    // 1表示增加好友，2表示删除好友，
+						// 3表示好友昵称变化
+    optional string nickName = 3;
+    optional uint64 NotifySeq = 4;
+
+}
+
+//通讯录联系人增加
+message AddPhoneNOReq
+{
+    repeated string phoneNO = 1;    
+}
+
+message AddPhoneNOResp
+{
+}
+
+//通讯录联系人删除
+message DelPhoneNOReq
+{
+    repeated string phoneNO = 1;    
+}
+
+//获取UserStateOnlineFriends
+message DelPhoneNOResp
+{
+}
+
+message GetOnlineStatusReq
+{
+	repeated string phoneNO = 1;
+	optional bytes attachedData = 2;
+}
+
+message GetOnlineStatusResp
+{
+	repeated string phoneNO = 1;
+	optional bytes attachedData = 2;
+}
