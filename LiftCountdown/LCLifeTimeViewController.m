@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"生命倒计时";
+        self.title = NSLocalizedString(@"LCSTR_Title", @"");
     }
     return self;
 }

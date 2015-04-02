@@ -147,6 +147,9 @@ const int AGE_NUM[5] = {65, 70, 80, 90, 99};
 	
 	[[NSUserDefaults standardUserDefaults] setFloat:delegate.mEndTimeInterval forKey:ENDTIME_KEY];
 	[[NSUserDefaults standardUserDefaults] setInteger:APP_STATE_ENTER forKey:APP_STATE_KEY];
+    
+    LCAppDelegate* app = (LCAppDelegate*)[UIApplication sharedApplication].delegate;
+    [app startLocalPush];
 	
 }
 

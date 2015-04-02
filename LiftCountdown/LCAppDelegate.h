@@ -15,4 +15,6 @@
 @property (assign, nonatomic) NSTimeInterval mEndTimeInterval;
 @property (assign, nonatomic) NSDate* mBirthDay;
 
+- (void)startLocalPush;
+
 @end

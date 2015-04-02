@@ -22,6 +22,7 @@
 		2AEBEE86196598B400CB2C71 /* LCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBEE85196598B400CB2C71 /* LCAppDelegate.m */; };
 		2AEBEE88196598B400CB2C71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AEBEE87196598B400CB2C71 /* Images.xcassets */; };
 		2AEBEEA61965990500CB2C71 /* LCBirthDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEBEEA51965990500CB2C71 /* LCBirthDayViewController.m */; };
+		2C5ACF971ACBC5CD00909C5A /* MMDeviceInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C5ACF961ACBC5CD00909C5A /* MMDeviceInfo.mm */; };
 		2C6B8BBF1ACA76AF0072BA0B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B8BC11ACA76AF0072BA0B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		2AEBEE8E196598B400CB2C71 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2AEBEEA41965990500CB2C71 /* LCBirthDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBirthDayViewController.h; sourceTree = "<group>"; };
 		2AEBEEA51965990500CB2C71 /* LCBirthDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBirthDayViewController.m; sourceTree = "<group>"; };
+		2C5ACF951ACBC5CD00909C5A /* MMDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMDeviceInfo.h; path = LiftCountdown/Common/MMDeviceInfo.h; sourceTree = "<group>"; };
+		2C5ACF961ACBC5CD00909C5A /* MMDeviceInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MMDeviceInfo.mm; path = LiftCountdown/Common/MMDeviceInfo.mm; sourceTree = "<group>"; };
 		2C6B8BC01ACA76AF0072BA0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C6B8BC21ACA77830072BA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2C6B8BC31ACA77830072BA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -101,8 +104,9 @@
 		2AEBEE69196598B400CB2C71 = {
 			isa = PBXGroup;
 			children = (
-				2A181CA3199F8A1800305F4A /* Resources */,
 				2AEBEE7B196598B400CB2C71 /* LiftCountdown */,
+				2A181CA3199F8A1800305F4A /* Resources */,
+				2C5ACF941ACBC5B500909C5A /* Common */,
 				2AEBEE74196598B400CB2C71 /* Frameworks */,
 				2AEBEE73196598B400CB2C71 /* Products */,
 			);
@@ -159,6 +163,15 @@
 				2AEBEE83196598B400CB2C71 /* LiftCountdown-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C5ACF941ACBC5B500909C5A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C5ACF951ACBC5CD00909C5A /* MMDeviceInfo.h */,
+				2C5ACF961ACBC5CD00909C5A /* MMDeviceInfo.mm */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +247,7 @@
 				2A75FA8C1976B65100B804E4 /* LCAgeViewController.m in Sources */,
 				2AEBEE86196598B400CB2C71 /* LCAppDelegate.m in Sources */,
 				2A2EFF2B196844A30001A92A /* LCViewController.m in Sources */,
+				2C5ACF971ACBC5CD00909C5A /* MMDeviceInfo.mm in Sources */,
 				2A2EFF28196842C20001A92A /* LCLifeTimeViewController.m in Sources */,
 				2AEBEEA61965990500CB2C71 /* LCBirthDayViewController.m in Sources */,
 			);
@@ -279,7 +293,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG YANGCHAO (FDQ446548J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHANG YANGCHAO (FDQ446548J)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

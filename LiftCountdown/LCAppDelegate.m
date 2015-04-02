@@ -11,6 +11,7 @@
 #import "LCLifeTimeViewController.h"
 #import "LCAgeViewController.h"
 #import "LCDefine.h"
+#import "MMDeviceInfo.h"
 
 
 @implementation LCAppDelegate
@@ -28,6 +29,8 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoRootView) name:NOTIFY_GOTOROOTVIEW object:nil];
 	
 	[self initUI];
+    
+    [self registRemotePush];
 
     return YES;
 }
@@ -36,7 +39,7 @@
 {
 	self.mEndTimeInterval = [[NSUserDefaults standardUserDefaults] floatForKey:ENDTIME_KEY];
 	
-	int nState = [[NSUserDefaults standardUserDefaults] integerForKey:APP_STATE_KEY];
+	NSInteger nState = [[NSUserDefaults standardUserDefaults] integerForKey:APP_STATE_KEY];
 	if (nState == APP_STATE_ENTER) {
 		LCBirthDayViewController* settingViewController = [[LCBirthDayViewController alloc] init];
 		[self.navController pushViewController:settingViewController animated:NO];
@@ -48,7 +51,32 @@
 	}
 }
 
-
+- (void)registRemotePush
+{
+#ifdef __IPHONE_8_0
+    if([MMDeviceInfo isiOS8plus])
+    {
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+        {
+            UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
+        }
+        else
+        {
+            [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        }
+        
+        return;
+    }
+#endif
+    
+    // push
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
+                                                                           UIRemoteNotificationTypeSound |
+                                                                           UIRemoteNotificationTypeBadge)];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -58,7 +86,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-	[self startLocalPush];
+//	[self startLocalPush];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -88,7 +116,7 @@
 	notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
 	notification.timeZone = [NSTimeZone defaultTimeZone];
 	notification.applicationIconBadgeNumber = 1;
-	notification.repeatInterval = NSCalendarUnitSecond;
+	notification.repeatInterval = NSCalendarUnitDay;
 	[[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
