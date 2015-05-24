@@ -80,7 +80,9 @@
 
 - (void)setting
 {
-	UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消"destructiveButtonTitle:@"重置" otherButtonTitles:@"关于", nil];
+	UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"LCSTR_common_cancel", @"")
+											   destructiveButtonTitle:@"重置"
+											   otherButtonTitles:@"关于",  nil];
 	[actionSheet showInView:self.view];
 }
 
